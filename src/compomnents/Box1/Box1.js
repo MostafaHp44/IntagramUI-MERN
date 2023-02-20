@@ -32,7 +32,7 @@ const[pass,setpass]=useState('')
         <i className='logo' role='img'></i>
     </div>
    
-<form action='post' >
+<form method="post" action="/" >
 <input  type='text' placeholder='Phone number, username,or email' value={user}  onChange={(e)=>{setuser(e.target.value)}}/>
 <input  type='password' placeholder='Password' value={pass} onChange={(e)=>{setpass(e.target.value)}} />
 <button className="action" type="submit" onClick={handlelogin}>
