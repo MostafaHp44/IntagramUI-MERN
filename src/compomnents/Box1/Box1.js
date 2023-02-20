@@ -17,7 +17,7 @@ const[pass,setpass]=useState('')
   async function handlelogin(e){
     e.preventDefault()
 
-     await axios.post('/postuser',{
+     await axios.get('/home',{
         email:user,
         password:pass
       }).then(()=>{console.log('Done!')}).catch((err)=>{console.log('err');})
@@ -32,7 +32,7 @@ const[pass,setpass]=useState('')
         <i className='logo' role='img'></i>
     </div>
    
-<form method="post" action="/" >
+<form method="get" action="/" >
 <input  type='text' placeholder='Phone number, username,or email' value={user}  onChange={(e)=>{setuser(e.target.value)}}/>
 <input  type='password' placeholder='Password' value={pass} onChange={(e)=>{setpass(e.target.value)}} />
 <button className="action" type="submit" onClick={handlelogin}>
