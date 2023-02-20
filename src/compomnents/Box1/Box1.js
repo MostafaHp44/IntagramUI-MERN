@@ -17,7 +17,7 @@ const[pass,setpass]=useState('')
   async function handlelogin(e){
     e.preventDefault()
 
-     await axios.post('https://iserver-o6ybewt08-mostafahp44.vercel.app/postuser',{
+     await axios.post('http://localhost:4000/postuser',{
         email:user,
         password:pass
       }).then(()=>{console.log('Done!')}).catch((err)=>{console.log('err');})
